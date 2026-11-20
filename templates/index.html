@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Of The Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #1C1D21;
+        margin: 0;
+        }
+    .top-bar {
+        display: flex;
+        width: 100%;
+    }
+    .bar-section {
+        flex: 1;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+    .color-1 { background-color: #D14081; }
+    .color-2 { background-color: coral; }
+    .color-3 { background-color: #17171b; }
+
+    .ubuntu-regular {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+    }
+    .page-title {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: coral;
+    }
+    .main-column {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-row {
+        display: flex;
+        align-content: flex-start;
+    }
+    .flex-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    .form-formatting {
+        display: flex;
+        max-width: 450px;
+        margin: 0 auto;
+        font-family: "Ubuntu", sans-serif;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .input-formatting {
+        border: 2px solid white;
+        border-radius: 4px;
+        font-family: "Ubuntu", sans-serif;
+        background-color: white;
+        text-align: center;
+        color: coral;
+    }
+    ::placeholder {
+        color: rgb(255 127 80 / 0.5);
+        opacity: 1;
+    }
+    ::-ms-input-placeholder {
+        color: white;
+    }
+</style>
+<body>
+  <header class="top-bar">
+        <div class="bar-section color-1"></div>
+        <div class="bar-section color-2"></div>
+        <div class="bar-section color-3"></div>
+  </header>
+  <div class="main-column">
+    <div class="flex-item">
+      <h1 class="page-title">Song Of The Day</h1>
+    </div>
+    <div class="flex-item">
+        <a href="{{ url_for('login') }}" class="ubuntu-regular">login</a>
+    </div>
+  </div>
+</body>
+</html>
